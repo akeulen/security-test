@@ -38,3 +38,34 @@ button {
   </button>
 
   <p id="result"></p>
+
+  Voeg onderstaande code toe onder de bestaande knop in je GitHub-bestand index.html.
+
+<div style="margin-top: 20px;">
+  <button
+    style="background: #dc2626; color: white; padding: 12px; border: none; border-radius: 6px;"
+    onclick="testParentAccess()">
+    Test toegang tot SalarFusion
+  </button>
+
+  <p id="securityResult"></p>
+</div>
+
+<script>
+function testParentAccess() {
+  const result = document.getElementById("securityResult");
+
+  try {
+    const title = window.parent.document.title;
+
+    result.textContent =
+      "TOEGANG MOGELIJK! Titel bovenliggende pagina: " + title;
+    result.style.color = "red";
+
+  } catch (error) {
+    result.textContent =
+      "TOEGANG GEBLOKKEERD: " + error.name;
+    result.style.color = "green";
+  }
+}
+</script>

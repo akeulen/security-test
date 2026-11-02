@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>SalarFusion beveiligingstest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 25px;
+      background: #f4f7fc;
+      text-align: center;
+    }
+    h2 { color: #2563eb; }
+    button {
+      background: #2563eb;
+      color: white;
+      border: 0;
+      border-radius: 6px;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>SalarFusion - Sessiecontrole</h2>
+  <p>Om verder te gaan moet je je sessie bevestigen.</p>
+  <button onclick="document.getElementById('result').textContent =
+    'DEMONSTRATIE: externe JavaScript uitgevoerd binnen het iframe.'">
+    Sessie bevestigen
+  </button>
+  <p id="result"></p>
+</body>
+</html>

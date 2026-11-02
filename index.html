@@ -1,37 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>SalarFusion beveiligingstest</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 25px;
-      background: #f4f7fc;
-      text-align: center;
-    }
-    h2 { color: #2563eb; }
-    button {
-      background: #2563eb;
-      color: white;
-      border: 0;
-      border-radius: 6px;
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>SalarFusion Security Test</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    padding: 25px;
+    text-align: center;
+  }
+  button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  input {
+    padding: 10px;
+    margin: 8px;
+  }
+</style>
 </head>
 <body>
   <h2>SalarFusion - Sessiecontrole</h2>
-  <p>Om verder te gaan moet je je sessie bevestigen.</p>
+  <p>Demonstratie: een externe website kan
+     invoervelden tonen binnen SalarFusion.</p>
+
+  <input placeholder="Fictieve gebruikersnaam"
+         autocomplete="off">
   <button onclick="document.getElementById('result').textContent =
-    'DEMONSTRATIE: externe JavaScript uitgevoerd binnen het iframe.'">
+    'DEMONSTRATIE: externe inhoud verwerkt invoer binnen het iframe.'">
     Sessie bevestigen
   </button>
+
   <p id="result"></p>
-  <button onclick="window.top.location.href='https://example.com/'">
-  Test navigatie buiten iframe
-</button>
-</body>
-</html>
